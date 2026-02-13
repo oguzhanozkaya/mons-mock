@@ -1,16 +1,115 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mobile Mock</title>
+  <title>Garanti BBVA - MONS Insights</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Hello Mobile 🌍</h1>
-    <p>This is my mock page.</p>
+  <div class="mobile-container">
+    <!-- Status Bar -->
+    <header class="app-header">
+      <div class="top-bar">
+        <span class="time">14:26</span>
+        <div class="status-icons">
+          <i class="fas fa-signal"></i>
+          <i class="fas fa-wifi"></i>
+          <i class="fas fa-battery-full"></i>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <i class="fas fa-bars"></i>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Garanti_BBVA_logo.svg/2560px-Garanti_BBVA_logo.svg.png" alt="Garanti BBVA" class="logo">
+        <i class="far fa-bell"></i>
+      </nav>
+    </header>
+
+    <main class="content">
+      <section class="page-title">
+        <h1>Durumum</h1>
+        <p class="subtitle">Finansal Sağlık Özeti</p>
+      </section>
+
+      <!-- MONS Insights Intelligence Layer -->
+      <section class="mons-insights">
+        <div class="section-header">
+          <span class="mons-label">MONS AI</span>
+          <span class="refresh-time">Az önce güncellendi</span>
+        </div>
+
+        <!-- Liquidity Card -->
+        <div class="insight-card liquidity">
+          <div class="card-icon">
+            <i class="fas fa-coins"></i>
+          </div>
+          <div class="card-body">
+            <h3>Atıl Bakiye Tespit Edildi</h3>
+            <p><strong>20,000 TL</strong> bakiyeniz 20 gündür hareketsiz. Vadeli hesaba aktararak ek kazanç sağlayabilirsiniz.</p>
+            <div class="card-stats">
+              <span class="gain">+145.50 TL Tahmini Kazanç</span>
+            </div>
+            <button class="cta-button primary">Vadeli Hesaba Aktar</button>
+          </div>
+        </div>
+
+        <!-- Automation Card -->
+        <div class="insight-card automation">
+          <div class="card-icon">
+            <i class="fas fa-file-invoice-dollar"></i>
+          </div>
+          <div class="card-body">
+            <h3>Ödeme Kolaylığı</h3>
+            <p>Elektrik faturanızı 9 aydır manuel ödüyorsunuz. Tek tıkla otomatik ödeme talimatı verebilirsiniz.</p>
+            <button class="cta-button secondary">Talimat Ver</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Traditional Durumum Data -->
+      <section class="standard-view">
+        <div class="data-row">
+          <span>Varlıklarım</span>
+          <span class="amount">142,500.00 TL</span>
+        </div>
+        <div class="data-row">
+          <span>Borçlarım</span>
+          <span class="amount negative">-12,250.00 TL</span>
+        </div>
+        
+        <div class="asset-chart-placeholder">
+          <!-- Simplified visual representation of the chart -->
+          <div class="bar-chart">
+            <div class="bar" style="height: 60%;"></div>
+            <div class="bar" style="height: 80%;"></div>
+            <div class="bar" style="height: 40%;"></div>
+            <div class="bar" style="height: 90%;"></div>
+            <div class="bar" style="height: 70%;"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+      <div class="nav-item active">
+        <i class="fas fa-home"></i>
+        <span>Durumum</span>
+      </div>
+      <div class="nav-item">
+        <i class="fas fa-exchange-alt"></i>
+        <span>İşlemler</span>
+      </div>
+      <div class="nav-item">
+        <i class="fas fa-th-large"></i>
+        <span>Menü</span>
+      </div>
+      <div class="nav-item">
+        <i class="fas fa-comment-dots"></i>
+        <span>Bize Sorun</span>
+      </div>
+    </nav>
   </div>
 </body>
 </html>
-
