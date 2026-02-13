@@ -9,20 +9,21 @@
     :root {
       --garanti-green: #007a33;
       --garanti-teal: #009b9b;
-      --dark-bg: #121212;
-      --card-bg: #1e1e1e;
-      --text-main: #ffffff;
-      --text-muted: #a0a0a0;
-      --accent-blue: #00a1e1;
-      --negative: #ff5252;
-      --positive: #4caf50;
+      --bg-light: #f4f7f6;
+      --white: #ffffff;
+      --card-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      --text-main: #222222;
+      --text-muted: #666666;
+      --negative: #d32f2f;
+      --positive: #388e3c;
+      --border: #e0e0e0;
     }
 
     body {
       margin: 0;
       padding: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background-color: #000;
+      background-color: #f0f0f0;
       color: var(--text-main);
       display: flex;
       justify-content: center;
@@ -32,23 +33,24 @@
 
     .mobile-container {
       width: 100%;
-      max-width: 430px; /* iPhone 14/15 Pro Max width */
+      max-width: 430px;
       height: 100vh;
-      background-color: var(--dark-bg);
+      background-color: var(--bg-light);
       position: relative;
       overflow-y: auto;
       display: flex;
       flex-direction: column;
-      box-shadow: 0 0 50px rgba(0,0,0,0.5);
+      box-shadow: 0 0 40px rgba(0,0,0,0.1);
     }
 
     /* Header & Nav */
     .app-header {
-      background-color: var(--dark-bg);
+      background-color: var(--white);
       padding: 10px 20px;
       position: sticky;
       top: 0;
       z-index: 100;
+      border-bottom: 1px solid var(--border);
     }
 
     .top-bar {
@@ -56,7 +58,8 @@
       justify-content: space-between;
       font-size: 12px;
       margin-bottom: 15px;
-      color: var(--text-main);
+      color: #000;
+      font-weight: 600;
     }
 
     .status-icons i {
@@ -70,12 +73,12 @@
     }
 
     .logo {
-      height: 20px;
-      filter: brightness(0) invert(1);
+      height: 22px;
     }
 
     .main-nav i {
       font-size: 20px;
+      color: var(--garanti-green);
     }
 
     /* Page Content */
@@ -86,100 +89,84 @@
 
     .page-title h1 {
       margin: 0;
-      font-size: 28px;
+      font-size: 24px;
       font-weight: 700;
+      color: #000;
     }
 
     .subtitle {
       color: var(--text-muted);
-      margin-top: 5px;
-      font-size: 14px;
+      margin-top: 4px;
+      font-size: 13px;
     }
 
     /* MONS Insights Intelligence Layer */
     .mons-insights {
-      margin-top: 30px;
-    }
-
-    .section-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 15px;
-    }
-
-    .mons-label {
-      background: linear-gradient(90deg, var(--garanti-green), var(--garanti-teal));
-      padding: 4px 10px;
-      border-radius: 4px;
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: 1px;
-    }
-
-    .refresh-time {
-      font-size: 11px;
-      color: var(--text-muted);
+      margin-top: 25px;
     }
 
     /* Cards */
     .insight-card {
-      background-color: var(--card-bg);
-      border-radius: 16px;
-      padding: 20px;
-      margin-bottom: 15px;
+      background-color: var(--white);
+      border-radius: 12px;
+      padding: 18px;
+      margin-bottom: 16px;
       display: flex;
       gap: 15px;
-      border: 1px solid rgba(255,255,255,0.05);
-      animation: slideUp 0.5s ease-out;
+      box-shadow: var(--card-shadow);
+      animation: fadeIn 0.4s ease-in-out;
     }
 
-    @keyframes slideUp {
-      from { opacity: 0; transform: translateY(20px); }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
     .card-icon {
-      width: 40px;
-      height: 40px;
-      background: rgba(0, 155, 155, 0.1);
-      border-radius: 10px;
+      width: 36px;
+      height: 36px;
+      background: #f0f8f5;
+      border-radius: 50%;
       display: flex;
       justify-content: center;
       align-items: center;
-      color: var(--garanti-teal);
+      color: var(--garanti-green);
       flex-shrink: 0;
+      font-size: 16px;
     }
 
     .card-body h3 {
       margin: 0;
-      font-size: 16px;
-      margin-bottom: 8px;
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: #000;
     }
 
     .card-body p {
       margin: 0;
-      font-size: 14px;
+      font-size: 13px;
       color: var(--text-muted);
-      line-height: 1.4;
+      line-height: 1.5;
     }
 
     .card-stats {
       margin-top: 10px;
       font-size: 13px;
-      color: var(--garanti-teal);
-      font-weight: 600;
+      color: var(--garanti-green);
+      font-weight: 700;
     }
 
     .cta-button {
       width: 100%;
-      padding: 12px;
-      border-radius: 8px;
+      padding: 10px;
+      border-radius: 6px;
       border: none;
       font-weight: 600;
-      margin-top: 15px;
+      margin-top: 12px;
       cursor: pointer;
-      transition: opacity 0.2s;
+      font-size: 13px;
+      transition: background 0.2s;
     }
 
     .cta-button.primary {
@@ -188,27 +175,34 @@
     }
 
     .cta-button.secondary {
-      background-color: transparent;
+      background-color: var(--white);
       border: 1px solid var(--garanti-teal);
       color: var(--garanti-teal);
     }
 
     /* Standard View Section */
     .standard-view {
-      margin-top: 40px;
-      padding-top: 20px;
-      border-top: 1px solid rgba(255,255,255,0.1);
+      margin-top: 30px;
+      padding: 20px;
+      background-color: var(--white);
+      border-radius: 12px;
+      box-shadow: var(--card-shadow);
     }
 
     .data-row {
       display: flex;
       justify-content: space-between;
-      padding: 15px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.05);
+      padding: 12px 0;
+      border-bottom: 1px solid #f0f0f0;
+      font-size: 14px;
+    }
+
+    .data-row:last-child {
+      border-bottom: none;
     }
 
     .amount {
-      font-weight: 600;
+      font-weight: 700;
     }
 
     .amount.negative {
@@ -216,27 +210,38 @@
     }
 
     .asset-chart-placeholder {
-      margin-top: 30px;
-      height: 120px;
+      margin-top: 25px;
+      height: 100px;
       display: flex;
       align-items: flex-end;
       justify-content: space-between;
-      padding: 0 10px;
     }
 
     .bar-chart {
       display: flex;
       align-items: flex-end;
-      gap: 15px;
+      gap: 12px;
       width: 100%;
       height: 100%;
     }
 
     .bar {
       flex: 1;
-      background: linear-gradient(to top, var(--garanti-green), transparent);
-      border-radius: 4px 4px 0 0;
-      opacity: 0.6;
+      background-color: #e8f5e9;
+      border-radius: 3px 3px 0 0;
+      position: relative;
+    }
+
+    .bar::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 40%;
+      background-color: var(--garanti-green);
+      border-radius: 3px 3px 0 0;
+      opacity: 0.8;
     }
 
     /* Bottom Nav */
@@ -245,40 +250,38 @@
       bottom: 0;
       width: 100%;
       max-width: 430px;
-      background-color: rgba(30, 30, 30, 0.95);
-      backdrop-filter: blur(10px);
+      background-color: var(--white);
       display: flex;
       justify-content: space-around;
-      padding: 10px 0 25px 0;
-      border-top: 1px solid rgba(255,255,255,0.1);
+      padding: 8px 0 20px 0;
+      border-top: 1px solid var(--border);
     }
 
     .nav-item {
       display: flex;
       flex-direction: column;
       align-items: center;
-      color: var(--text-muted);
+      color: #888;
       font-size: 10px;
-      gap: 5px;
+      gap: 4px;
+      flex: 1;
     }
 
     .nav-item i {
-      font-size: 20px;
+      font-size: 18px;
     }
 
     .nav-item.active {
       color: var(--garanti-green);
     }
 
-    /* Hide scrollbar for Chrome, Safari and Opera */
-    .mobile-container::-webkit-scrollbar {
-      display: none;
+    .nav-item.active i {
+      color: var(--garanti-green);
     }
 
-    /* Hide scrollbar for IE, Edge and Firefox */
-    .mobile-container {
-      -ms-overflow-style: none;  /* IE and Edge */
-      scrollbar-width: none;  /* Firefox */
+    /* Scrollbar */
+    .mobile-container::-webkit-scrollbar {
+      display: none;
     }
   </style>
 </head>
@@ -304,15 +307,11 @@
     <main class="content">
       <section class="page-title">
         <h1>Durumum</h1>
-        <p class="subtitle">Finansal Sağlık Özeti</p>
+        <p class="subtitle">Finansal Analizim</p>
       </section>
 
       <!-- MONS Insights Intelligence Layer -->
       <section class="mons-insights">
-        <div class="section-header">
-          <span class="mons-label">MONS AI</span>
-          <span class="refresh-time">Az önce güncellendi</span>
-        </div>
 
         <!-- Liquidity Card -->
         <div class="insight-card liquidity">
@@ -323,7 +322,7 @@
             <h3>Atıl Bakiye Tespit Edildi</h3>
             <p><strong>20,000 TL</strong> bakiyeniz 20 gündür hareketsiz. Vadeli hesaba aktararak ek kazanç sağlayabilirsiniz.</p>
             <div class="card-stats">
-              <span class="gain">+145.50 TL Tahmini Kazanç</span>
+              <span>+145.50 TL Tahmini Kazanç</span>
             </div>
             <button class="cta-button primary">Vadeli Hesaba Aktar</button>
           </div>
@@ -332,7 +331,7 @@
         <!-- Automation Card -->
         <div class="insight-card automation">
           <div class="card-icon">
-            <i class="fas fa-file-invoice-dollar"></i>
+            <i class="fas fa-bolt"></i>
           </div>
           <div class="card-body">
             <h3>Ödeme Kolaylığı</h3>
@@ -354,7 +353,6 @@
         </div>
         
         <div class="asset-chart-placeholder">
-          <!-- Simplified visual representation of the chart -->
           <div class="bar-chart">
             <div class="bar" style="height: 60%;"></div>
             <div class="bar" style="height: 80%;"></div>
