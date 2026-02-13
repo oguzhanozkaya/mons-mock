@@ -33,9 +33,7 @@
     <!-- Main Content -->
     <main class="content">
 
-      <!-- ═══════════════════════════════════════ -->
-      <!-- MONS INSIGHTS HERO                     -->
-      <!-- ═══════════════════════════════════════ -->
+      <!-- MONS INSIGHTS HERO -->
       <section class="group-section">
         <div class="mons-hero fade-up">
           <div class="mons-hero-top">
@@ -47,7 +45,6 @@
           <p class="mons-greeting">Merhaba, Selin</p>
           <p class="mons-summary">Finansal durumunuz güçlü görünüyor. 2 optimizasyon fırsatı tespit edildi.</p>
 
-          <!-- Score Dashboard -->
           <div class="score-dashboard">
             <div class="overall-score">
               <svg class="ring-svg" viewBox="0 0 120 120">
@@ -89,20 +86,16 @@
           </div>
         </div>
 
-        <!-- Streak Banner -->
         <div class="streak-banner fade-up">
           <span class="streak-fire">🔥</span>
           <span>3 ay üst üste tasarruf hedefinizi tutturdunuz!</span>
         </div>
       </section>
 
-      <!-- ═══════════════════════════════════════ -->
-      <!-- İPUÇLARI (Insight Cards)               -->
-      <!-- ═══════════════════════════════════════ -->
+      <!-- İPUÇLARI -->
       <section class="group-section">
         <h3 class="group-title">İpuçları</h3>
 
-        <!-- Liquidity Insight -->
         <div class="widget insight-widget fade-up">
           <div class="widget-header">
             <div class="widget-icon green-bg"><i class="fas fa-chart-line"></i></div>
@@ -119,7 +112,6 @@
           </div>
         </div>
 
-        <!-- Automation Insight -->
         <div class="widget insight-widget fade-up">
           <div class="widget-header">
             <div class="widget-icon purple-bg"><i class="fas fa-bolt"></i></div>
@@ -132,11 +124,10 @@
             <p>Elektrik faturanızı <strong>9 aydır</strong> manuel ödüyorsunuz. Tek dokunuşla otomatik ödeme kurun, hiçbir ödemeyi kaçırmayın.</p>
           </div>
           <div class="widget-footer">
-            <button class="btn btn-outline">Otomatik Ödeme Kur <i class="fas fa-bolt"></i></button>
+            <button class="btn btn-primary">Otomatik Ödeme Kur <i class="fas fa-bolt"></i></button>
           </div>
         </div>
 
-        <!-- Timing Insight -->
         <div class="widget insight-widget fade-up">
           <div class="widget-header">
             <div class="widget-icon blue-bg"><i class="fas fa-calendar-alt"></i></div>
@@ -162,87 +153,64 @@
         </div>
       </section>
 
-      <!-- ═══════════════════════════════════════ -->
-      <!-- DURUMUM (Financial Summary)            -->
-      <!-- ═══════════════════════════════════════ -->
+      <!-- DURUMUM (Merged Content) -->
       <section class="group-section">
         <h3 class="group-title">Durumum</h3>
 
-        <!-- Varlıklar -->
-        <div class="widget summary-widget fade-up">
-          <div class="summary-header">
-            <div>
+        <div class="widget summary-widget fade-up" style="padding-bottom: 8px;">
+          <!-- Toplam Varlıklarım ve Toplam Borçlarım -->
+          <div style="display: flex; padding: 16px 16px 12px; gap: 16px;">
+            <div style="flex: 1; border-right: 1px solid #f1f5f9;">
               <div class="summary-label">Toplam Varlıklarım</div>
               <div class="summary-value">₺142.500,00</div>
+              <div class="detail-row" style="border-top: none; padding: 4px 0 0; margin-top: 8px;">
+                <span class="detail-label" style="font-size: 9px;">Vadesiz / Yatırım</span>
+                <span class="detail-value" style="font-size: 10px;">₺42.5k / ₺100k</span>
+              </div>
             </div>
-            <i class="fas fa-chevron-right" style="color: #cbd5e1;"></i>
-          </div>
-          <div class="summary-details">
-            <div class="detail-row">
-              <span class="detail-label">Vadesiz Hesaplar</span>
-              <span class="detail-value">₺42.500,00</span>
-            </div>
-            <div class="detail-row">
-              <span class="detail-label">Yatırım Hesapları</span>
-              <span class="detail-value">₺100.000,00</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Borçlar -->
-        <div class="widget summary-widget fade-up">
-          <div class="summary-header">
-            <div>
+            <div style="flex: 1; padding-left: 4px;">
               <div class="summary-label">Toplam Borçlarım</div>
               <div class="summary-value neg">₺12.250,00</div>
+              <div class="detail-row" style="border-top: none; padding: 4px 0 0; margin-top: 8px;">
+                <span class="detail-label" style="font-size: 9px;">Kredi Kartları</span>
+                <span class="detail-value neg" style="font-size: 10px;">₺12.250,00</span>
+              </div>
             </div>
-            <i class="fas fa-chevron-right" style="color: #cbd5e1;"></i>
           </div>
-          <div class="summary-details">
-            <div class="detail-row">
-              <span class="detail-label">Kredi Kartları</span>
-              <span class="detail-value neg">₺12.250,00</span>
+
+          <!-- Gelirler / Giderler Section -->
+          <div style="margin: 0 12px 12px; padding: 12px; background: #f9fafb; border-radius: 8px;">
+            <div class="widget-title" style="font-size: 12px; margin-bottom: 8px; text-transform: uppercase; color: var(--text-gray);">Gelirler / Giderler</div>
+            <div class="income-expense-row" style="background: transparent; padding: 0;">
+              <div class="ie-item">
+                <span class="ie-label">GELİR</span>
+                <span class="ie-value text-green">₺28.500</span>
+              </div>
+              <div class="ie-divider" style="height: 24px;"></div>
+              <div class="ie-item">
+                <span class="ie-label">GİDER</span>
+                <span class="ie-value text-red">₺15.320</span>
+              </div>
+              <div class="ie-divider" style="height: 24px;"></div>
+              <div class="ie-item">
+                <span class="ie-label">NET</span>
+                <span class="ie-value text-green">+₺13.180</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Gelirler / Giderler -->
-        <div class="widget fade-up">
-          <div class="widget-header">
-            <div class="widget-icon teal-bg"><i class="fas fa-exchange-alt"></i></div>
-            <div class="widget-title">Gelirler / Giderler</div>
-          </div>
-          <div class="income-expense-row">
-            <div class="ie-item">
-              <span class="ie-label">Gelir</span>
-              <span class="ie-value text-green">₺28.500</span>
-            </div>
-            <div class="ie-divider"></div>
-            <div class="ie-item">
-              <span class="ie-label">Gider</span>
-              <span class="ie-value text-red">₺15.320</span>
-            </div>
-            <div class="ie-divider"></div>
-            <div class="ie-item">
-              <span class="ie-label">Net</span>
-              <span class="ie-value text-green">+₺13.180</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Yaklaşan İşlemler -->
         <div class="widget fade-up">
           <div class="widget-header" style="margin-bottom: 0;">
             <div class="widget-icon teal-bg"><i class="fas fa-clock"></i></div>
-            <div>
+            <div style="flex: 1; margin-left: 12px;">
               <div class="widget-title">Yaklaşan İşlemler <span class="tag-new">YENİLENDİ</span></div>
               <p style="font-size: 13px; color: var(--text-gray); margin: 4px 0 0;">Yaklaşan ve gecikmiş işlemlerinizi buradan kolayca takip edin.</p>
             </div>
-            <i class="fas fa-chevron-right" style="color: #cbd5e1; margin-left: auto;"></i>
+            <i class="fas fa-chevron-right" style="color: #cbd5e1;"></i>
           </div>
         </div>
 
-        <!-- Kredi Koçum (AI Enhanced) -->
         <div class="widget fade-up">
           <div class="widget-header">
             <div class="widget-icon teal-bg"><i class="fas fa-shield-alt"></i></div>
@@ -279,40 +247,20 @@
         </div>
       </section>
 
-      <!-- ═══════════════════════════════════════ -->
-      <!-- QUICK TILES                            -->
-      <!-- ═══════════════════════════════════════ -->
+      <!-- QUICK TILES -->
       <div class="quick-tiles fade-up">
         <div class="tile-row">
-          <div class="tile">
-            <div class="tile-icon">🚗</div>
-            <span>Aracım</span>
-          </div>
-          <div class="tile">
-            <div class="tile-icon">🏠</div>
-            <span>Evim</span>
-          </div>
-          <div class="tile">
-            <div class="tile-icon">🧳</div>
-            <span>Seyahatim</span>
-            <span class="tag-red-sm">YENİ</span>
-          </div>
+          <div class="tile"><div class="tile-icon">🚗</div><span>Aracım</span></div>
+          <div class="tile"><div class="tile-icon">🏠</div><span>Evim</span></div>
+          <div class="tile"><div class="tile-icon">🧳</div><span>Seyahatim</span><span class="tag-red-sm">YENİ</span></div>
         </div>
         <div class="tile-row">
-          <div class="tile">
-            <div class="tile-icon">🎬</div>
-            <span>Dijital Aboneliklerim</span>
-          </div>
-          <div class="tile">
-            <div class="tile-icon">🌿</div>
-            <span>Ekolojik Durumum</span>
-          </div>
+          <div class="tile" style="flex: 2;"><div class="tile-icon">🎬</div><span>Dijital Aboneliklerim</span></div>
+          <div class="tile"><div class="tile-icon">🌿</div><span>Ekolojik Durumum</span></div>
         </div>
       </div>
 
-      <!-- ═══════════════════════════════════════ -->
-      <!-- FİNANSAL SAĞLIK İPUÇLARI (Enhanced)   -->
-      <!-- ═══════════════════════════════════════ -->
+      <!-- FİNANSAL SAĞLIK İPUÇLARI -->
       <div class="widget insight-widget fade-up">
         <div class="saglik-header">
           <div class="widget-title">Finansal Sağlık İpuçları</div>
@@ -332,46 +280,25 @@
         </div>
       </div>
 
-      <!-- ═══════════════════════════════════════ -->
-      <!-- GAMIFICATION — BAŞARILARIM             -->
-      <!-- ═══════════════════════════════════════ -->
+      <!-- GAMIFICATION -->
       <div class="widget gamification-widget fade-up">
         <div class="gamification-header">
           <div class="widget-title">Başarılarım</div>
           <span class="level-badge">Seviye 3</span>
         </div>
         <div class="badges-row">
-          <div class="badge-item">
-            <div class="badge-circle earned">🏦</div>
-            <span>İlk Yatırım</span>
-          </div>
-          <div class="badge-item">
-            <div class="badge-circle earned">⚡</div>
-            <span>Otomasyon</span>
-          </div>
-          <div class="badge-item">
-            <div class="badge-circle earned">🔥</div>
-            <span>3 Ay Seri</span>
-          </div>
-          <div class="badge-item">
-            <div class="badge-circle locked">🎯</div>
-            <span>Hedef Avcısı</span>
-          </div>
+          <div class="badge-item"><div class="badge-circle earned">🏦</div><span>İlk Yatırım</span></div>
+          <div class="badge-item"><div class="badge-circle earned">⚡</div><span>Otomasyon</span></div>
+          <div class="badge-item"><div class="badge-circle earned">🔥</div><span>3 Ay Seri</span></div>
+          <div class="badge-item"><div class="badge-circle locked">🎯</div><span>Hedef Avcısı</span></div>
         </div>
         <div class="xp-section">
-          <div class="xp-header">
-            <span>Seviye 4'e</span>
-            <span>320 / 500 XP</span>
-          </div>
-          <div class="xp-track">
-            <div class="xp-fill"></div>
-          </div>
+          <div class="xp-header"><span>Seviye 4'e</span><span>320 / 500 XP</span></div>
+          <div class="xp-track"><div class="xp-fill"></div></div>
         </div>
       </div>
 
-      <!-- ═══════════════════════════════════════ -->
-      <!-- PLANLAR                                -->
-      <!-- ═══════════════════════════════════════ -->
+      <!-- PLANLAR -->
       <div class="widget fade-up">
         <div class="widget-title" style="margin-bottom: 14px;">Planlar</div>
         <div class="plan-card">
@@ -388,22 +315,10 @@
 
     <!-- Bottom Navigation -->
     <nav class="bottom-nav">
-      <div class="nav-item active">
-        <i class="fas fa-heart"></i>
-        <span>Durumum</span>
-      </div>
-      <div class="nav-item">
-        <i class="fas fa-credit-card"></i>
-        <span>Hesap ve Kart</span>
-      </div>
-      <div class="nav-item">
-        <i class="fas fa-plus-circle"></i>
-        <span>Başvurular</span>
-      </div>
-      <div class="nav-item">
-        <i class="fas fa-list-alt"></i>
-        <span>İşlemler</span>
-      </div>
+      <div class="nav-item active"><i class="fas fa-heart"></i><span>Durumum</span></div>
+      <div class="nav-item"><i class="fas fa-credit-card"></i><span>Hesap ve Kart</span></div>
+      <div class="nav-item"><i class="fas fa-plus-circle"></i><span>Başvurular</span></div>
+      <div class="nav-item"><i class="fas fa-list-alt"></i><span>İşlemler</span></div>
     </nav>
 
   </div>
