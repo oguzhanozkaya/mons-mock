@@ -66,28 +66,17 @@
       justify-content: space-between;
       align-items: center;
       height: 44px;
+      position: relative;
     }
 
-    .logo-container {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .clover-icon {
-      width: 28px;
-      height: 28px;
-      background-color: var(--garanti-green);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 16px;
-    }
-
-    .logo {
-      height: 18px;
+    .header-title {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--bbva-blue);
+      margin: 0;
     }
 
     .nav-icons {
@@ -95,6 +84,7 @@
       gap: 20px;
       font-size: 20px;
       color: var(--bbva-blue);
+      margin-left: auto;
     }
 
     /* Main Content */
@@ -103,21 +93,18 @@
       padding-bottom: 100px;
     }
 
-    .welcome-section {
-      margin-bottom: 24px;
+    .group-section {
+      margin-bottom: 32px;
     }
 
-    .welcome-section h1 {
-      font-size: 26px;
+    .group-title {
+      font-size: 18px;
       font-weight: 800;
-      margin: 0;
       color: var(--bbva-blue);
-    }
-
-    .welcome-section p {
-      margin: 4px 0 0;
-      font-size: 14px;
-      color: var(--text-gray);
+      margin: 0 0 16px 4px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
     /* Widgets / Cards */
@@ -310,10 +297,8 @@
         </div>
       </div>
       <div class="nav-bar">
-        <div class="logo-container">
-          <div class="clover-icon"><i class="fas fa-leaf"></i></div>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Garanti_BBVA_2019.svg/512px-Garanti_BBVA_2019.svg.png" alt="Garanti BBVA" class="logo">
-        </div>
+        <i class="fas fa-bars" style="font-size: 20px; color: var(--bbva-blue);"></i>
+        <h2 class="header-title">Durumum</h2>
         <div class="nav-icons">
           <i class="far fa-bell"></i>
           <i class="fas fa-search"></i>
@@ -322,13 +307,10 @@
     </header>
 
     <main class="content">
-      <section class="welcome-section">
-        <h1>Durumum</h1>
-        <p>Hesaplarınızın güncel özeti</p>
-      </section>
-
-      <!-- MONS Insights -->
-      <section class="mons-section">
+      <!-- Group 1: İpuçları -->
+      <section class="group-section">
+        <h3 class="group-title">İpuçları</h3>
+        
         <!-- Liquidity Insight -->
         <div class="widget insight-widget">
           <div class="widget-header">
@@ -361,42 +343,46 @@
         </div>
       </section>
 
-      <!-- Standard Financial Widgets -->
-      <div class="widget summary-widget">
-        <div class="summary-header">
-          <div>
-            <div class="summary-label">Toplam Varlıklarım</div>
-            <div class="summary-value">142,500.00 TL</div>
-          </div>
-          <i class="fas fa-chevron-right" style="color: #cbd5e1; margin-bottom: 8px;"></i>
-        </div>
-        <div class="summary-details">
-          <div class="detail-row">
-            <span class="detail-label">Vadesiz Hesaplar</span>
-            <span class="detail-value">42,500.00 TL</span>
-          </div>
-          <div class="detail-row">
-            <span class="detail-label">Yatırım Hesapları</span>
-            <span class="detail-value">100,000.00 TL</span>
-          </div>
-        </div>
-      </div>
+      <!-- Group 2: Durumum -->
+      <section class="group-section">
+        <h3 class="group-title">Durumum</h3>
 
-      <div class="widget summary-widget">
-        <div class="summary-header">
-          <div>
-            <div class="summary-label">Toplam Borçlarım</div>
-            <div class="summary-value neg">12,250.00 TL</div>
+        <div class="widget summary-widget">
+          <div class="summary-header">
+            <div>
+              <div class="summary-label">Toplam Varlıklarım</div>
+              <div class="summary-value">142,500.00 TL</div>
+            </div>
+            <i class="fas fa-chevron-right" style="color: #cbd5e1; margin-bottom: 8px;"></i>
           </div>
-          <i class="fas fa-chevron-right" style="color: #cbd5e1; margin-bottom: 8px;"></i>
-        </div>
-        <div class="summary-details">
-          <div class="detail-row">
-            <span class="detail-label">Kredi Kartları</span>
-            <span class="detail-value neg">12,250.00 TL</span>
+          <div class="summary-details">
+            <div class="detail-row">
+              <span class="detail-label">Vadesiz Hesaplar</span>
+              <span class="detail-value">42,500.00 TL</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Yatırım Hesapları</span>
+              <span class="detail-value">100,000.00 TL</span>
+            </div>
           </div>
         </div>
-      </div>
+
+        <div class="widget summary-widget">
+          <div class="summary-header">
+            <div>
+              <div class="summary-label">Toplam Borçlarım</div>
+              <div class="summary-value neg">12,250.00 TL</div>
+            </div>
+            <i class="fas fa-chevron-right" style="color: #cbd5e1; margin-bottom: 8px;"></i>
+          </div>
+          <div class="summary-details">
+            <div class="detail-row">
+              <span class="detail-label">Kredi Kartları</span>
+              <span class="detail-value neg">12,250.00 TL</span>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Bottom Navigation -->
