@@ -99,13 +99,13 @@
 
     .sub-scores { display: flex; gap: 9px; flex: 1; }
     .sub-score-item { display: flex; flex-direction: column; align-items: center; gap: 3.5px; flex: 1; position: relative; }
-    .ring-svg-sm { width: 54px; height: 54px; transform: rotate(-90deg); }
+    .ring-svg-sm { width: 64px; height: 64px; transform: rotate(-90deg); }
     .ring-bg-sm { fill: none; stroke: rgba(255,255,255,0.12); stroke-width: 5.5; }
     .ring-fill-sm { fill: none; stroke-width: 5.5; stroke-linecap: round; stroke-dasharray: 201.06; stroke-dashoffset: calc(201.06 * (1 - var(--score))); }
     .ring-fill-sm.green { stroke: #4ade80; }
     .ring-fill-sm.amber { stroke: #fbbf24; }
     .ring-fill-sm.teal { stroke: #2dd4bf; }
-    .ring-label-sm { position: absolute; top: 15px; font-size: 14px; font-weight: 800; color: white; }
+    .ring-label-sm { position: absolute; top: 19px; font-size: 15px; font-weight: 800; color: white; }
     .sub-title { font-size: 10px; font-weight: 600; color: rgba(255,255,255,0.6); }
 
     .streak-banner { display: flex; align-items: center; gap: 7px; background: linear-gradient(135deg, #fff7ed, #fef3c7); border: 1px solid #fde68a; border-radius: var(--border-radius); padding: 10px 12px; margin-bottom: 11px; font-size: 12.5px; font-weight: 600; color: #92400e; }
@@ -255,7 +255,7 @@
               <span class="mons-ai-tag"><i class="fas fa-robot"></i> AI Destekli</span>
             </div>
           </div>
-          <p class="mons-summary">Finansal durumunuz güçlü görünüyor. 2 optimizasyon fırsatı tespit edildi.</p>
+          <p class="mons-summary">Finansal durumunuz güçlü görünüyor.</p>
 
           <div class="score-dashboard">
             <div class="overall-score">
@@ -317,10 +317,10 @@
             </div>
           </div>
           <div class="widget-content">
-            <p>Vadesiz hesabınızda <strong>₺20.000</strong> tutarında bakiye <strong>20 gündür</strong> atıl bekliyor. Bu tutarı kısa vadeli mevduata aktararak tahmini <span class="text-green"><strong>₺267 getiri</strong></span> elde edebilirsiniz.</p>
+            <p>Maaş ödemeniz ile kira ödemeniz arasındaki <strong>20 günde</strong>, hesabınızdaki <strong>₺20.000</strong> tutarındaki bakiyeniz atıl bekliyor. Bu tutarı <strong>Para Piyasası Fonumuza</strong> aktararak ayda tahmini <span class="text-green"><strong>₺315 getiri</strong></span> elde edebilirsiniz.</p>
           </div>
           <div class="widget-footer">
-            <button class="btn btn-primary">Vadeli Hesaba Taşı <i class="fas fa-arrow-right"></i></button>
+            <button class="btn btn-primary">Fona Aktar <i class="fas fa-arrow-right"></i></button>
           </div>
         </div>
 
@@ -450,7 +450,7 @@
                 <div style="font-size: 12px; font-weight: 800; color: #059669; margin-top: 2px;">Çok İyi</div>
               </div>
             </div>
-            <div class="product-tags">
+            <div class="product-tags" style="margin-top: 14px;">
               <span>Size uygun:</span>
               <span class="product-tag">Vadeli Mevduat</span>
               <span class="product-tag">Devlet Tahvili</span>
