@@ -92,7 +92,7 @@
     .overall-score { position: relative; width: 80px; height: 80px; flex-shrink: 0; }
     .ring-svg { width: 100%; height: 100%; transform: rotate(-90deg); }
     .ring-bg { fill: none; stroke: rgba(255,255,255,0.12); stroke-width: 7; }
-    .ring-fill { fill: none; stroke: #4ade80; stroke-width: 7; stroke-linecap: round; stroke-dasharray: 251.32; stroke-dashoffset: calc(251.32 * (1 - var(--score))); }
+    .ring-fill { fill: none; stroke: #60a5fa; stroke-width: 7; stroke-linecap: round; stroke-dasharray: 251.32; stroke-dashoffset: calc(251.32 * (1 - var(--score))); }
     .ring-label { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; }
     .ring-value { font-size: 21px; font-weight: 800; display: block; line-height: 1; }
     .ring-caption { font-size: 9px; font-weight: 600; text-transform: uppercase; display: block; margin-top: 2px; opacity: 0.65; }
@@ -102,9 +102,9 @@
     .ring-svg-sm { width: 64px; height: 64px; transform: rotate(-90deg); }
     .ring-bg-sm { fill: none; stroke: rgba(255,255,255,0.12); stroke-width: 5.5; }
     .ring-fill-sm { fill: none; stroke-width: 5.5; stroke-linecap: round; stroke-dasharray: 201.06; stroke-dashoffset: calc(201.06 * (1 - var(--score))); }
-    .ring-fill-sm.green { stroke: #4ade80; }
-    .ring-fill-sm.amber { stroke: #fbbf24; }
-    .ring-fill-sm.teal { stroke: #2dd4bf; }
+    .ring-fill-sm.blue { stroke: #60a5fa; }
+    .ring-fill-sm.blue-light { stroke: #93c5fd; }
+    .ring-fill-sm.red { stroke: #f87171; }
     .ring-label-sm { position: absolute; top: 19px; font-size: 15px; font-weight: 800; color: white; }
     .sub-title { font-size: 10px; font-weight: 600; color: rgba(255,255,255,0.6); }
 
@@ -197,6 +197,27 @@
     .xp-track { height: 6px; background: #e5e7eb; border-radius: 3.5px; margin-top: 9px; overflow: hidden; }
     .xp-fill { width: 64%; height: 100%; background: linear-gradient(90deg, #004481, #3b82f6); border-radius: 3.5px; }
 
+    /* Detailed Scores Card */
+    .detailed-scores { text-align: center; }
+    .detailed-ring { position: relative; width: 100px; height: 100px; margin: 0 auto 6px; }
+    .detailed-ring .ring-svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+    .detailed-ring .ring-bg-detail { fill: none; stroke: #e5e7eb; stroke-width: 7; }
+    .detailed-ring .ring-fill-detail { fill: none; stroke: #60a5fa; stroke-width: 7; stroke-linecap: round; stroke-dasharray: 251.32; stroke-dashoffset: calc(251.32 * (1 - var(--score))); }
+    .detailed-ring .ring-label { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; }
+    .detailed-ring .ring-value { font-size: 26px; font-weight: 800; color: var(--bbva-blue); }
+    .detailed-ring .ring-caption { font-size: 9px; font-weight: 600; text-transform: uppercase; color: var(--text-gray); }
+    .score-bar-section { padding: 14px 0; border-top: 1px solid #f1f5f9; }
+    .score-bar-section:first-of-type { border-top: none; }
+    .score-bar-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+    .score-bar-title { font-size: 14px; font-weight: 700; color: var(--bbva-blue); }
+    .score-bar-value { font-size: 14px; font-weight: 800; }
+    .score-bar-track { height: 8px; background: #e5e7eb; border-radius: 4px; overflow: hidden; margin-bottom: 8px; }
+    .score-bar-fill { height: 100%; border-radius: 4px; }
+    .score-bar-fill.fill-blue { background: linear-gradient(90deg, #004481, #60a5fa); }
+    .score-bar-fill.fill-blue-light { background: linear-gradient(90deg, #1e40af, #93c5fd); }
+    .score-bar-fill.fill-red { background: linear-gradient(90deg, #991b1b, #f87171); }
+    .score-bar-desc { font-size: 12px; color: var(--text-gray); line-height: 1.5; text-align: left; }
+
     /* Plans */
     .plan-card { display: flex; align-items: center; gap: 11px; padding: 3.5px 0; }
     .plan-left strong { font-size: 13.5px; color: var(--bbva-blue); }
@@ -273,7 +294,7 @@
               <div class="sub-score-item">
                 <svg class="ring-svg-sm" viewBox="0 0 90 90">
                   <circle class="ring-bg-sm" cx="45" cy="45" r="36"/>
-                  <circle class="ring-fill-sm green" cx="45" cy="45" r="36" style="--score: 0.78;"/>
+                  <circle class="ring-fill-sm blue" cx="45" cy="45" r="36" style="--score: 0.78;"/>
                 </svg>
                 <div class="ring-label-sm"><span>7.8</span></div>
                 <span class="sub-title">Tasarruf</span>
@@ -281,7 +302,7 @@
               <div class="sub-score-item">
                 <svg class="ring-svg-sm" viewBox="0 0 90 90">
                   <circle class="ring-bg-sm" cx="45" cy="45" r="36"/>
-                  <circle class="ring-fill-sm amber" cx="45" cy="45" r="36" style="--score: 0.62;"/>
+                  <circle class="ring-fill-sm blue-light" cx="45" cy="45" r="36" style="--score: 0.62;"/>
                 </svg>
                 <div class="ring-label-sm"><span>6.2</span></div>
                 <span class="sub-title">Yatırım</span>
@@ -289,9 +310,9 @@
               <div class="sub-score-item">
                 <svg class="ring-svg-sm" viewBox="0 0 90 90">
                   <circle class="ring-bg-sm" cx="45" cy="45" r="36"/>
-                  <circle class="ring-fill-sm teal" cx="45" cy="45" r="36" style="--score: 0.85;"/>
+                  <circle class="ring-fill-sm red" cx="45" cy="45" r="36" style="--score: 0.41;"/>
                 </svg>
-                <div class="ring-label-sm"><span>8.5</span></div>
+                <div class="ring-label-sm"><span>4.1</span></div>
                 <span class="sub-title">Borç Yön.</span>
               </div>
             </div>
@@ -508,6 +529,60 @@
         <div class="xp-section">
           <div class="xp-header"><span>Seviye 4'e</span><span>320 / 500 XP</span></div>
           <div class="xp-track"><div class="xp-fill"></div></div>
+        </div>
+      </div>
+
+      <!-- DETAILED MONS SCORES -->
+      <div class="widget fade-up" style="border-left: 3.5px solid var(--bbva-blue);">
+        <div class="detailed-scores">
+          <div style="display: flex; align-items: center; justify-content: center; gap: 7px; margin-bottom: 14px;">
+            <span class="mons-mini-badge"><i class="fas fa-layer-group"></i> MONS</span>
+            <span style="font-size: 14px; font-weight: 700; color: var(--bbva-blue);">Detaylı Puan Analizi</span>
+          </div>
+          <div class="detailed-ring">
+            <svg class="ring-svg" viewBox="0 0 120 120">
+              <circle class="ring-bg-detail" cx="60" cy="60" r="50"/>
+              <circle class="ring-fill-detail" cx="60" cy="60" r="50" style="--score: 0.75;"/>
+            </svg>
+            <div class="ring-label">
+              <span class="ring-value">7.5</span>
+              <span class="ring-caption">MONS Puanı</span>
+            </div>
+          </div>
+          <p style="font-size: 11px; color: var(--text-gray); margin-bottom: 14px;">Genel finansal sağlık skorunuz</p>
+        </div>
+
+        <div class="score-bar-section">
+          <div class="score-bar-top">
+            <span class="score-bar-title"><i class="fas fa-piggy-bank" style="margin-right: 6px; color: #60a5fa;"></i>Tasarruf</span>
+            <span class="score-bar-value" style="color: #004481;">7.8 / 10</span>
+          </div>
+          <div class="score-bar-track">
+            <div class="score-bar-fill fill-blue" style="width: 78%;"></div>
+          </div>
+          <p class="score-bar-desc">Düzenli tasarruf alışkanlığınız güçlü. Maaş gününden itibaren otomatik aktarım yaparak bu puanı daha da yükseltebilirsiniz. Hedef oranınıza ulaşmanıza sadece 2 ay kaldı.</p>
+        </div>
+
+        <div class="score-bar-section">
+          <div class="score-bar-top">
+            <span class="score-bar-title"><i class="fas fa-chart-pie" style="margin-right: 6px; color: #93c5fd;"></i>Yatırım</span>
+            <span class="score-bar-value" style="color: #1e40af;">6.2 / 10</span>
+          </div>
+          <div class="score-bar-track">
+            <div class="score-bar-fill fill-blue-light" style="width: 62%;"></div>
+          </div>
+          <p class="score-bar-desc">Yatırım portföyünüz tek bir varlık sınıfına yoğunlaşmış durumda. Çeşitlendirme yaparak riskinizi azaltabilir ve uzun vadeli getirinizi artırabilirsiniz. Para piyasası fonları iyi bir başlangıç noktası olabilir.</p>
+        </div>
+
+        <div class="score-bar-section">
+          <div class="score-bar-top">
+            <span class="score-bar-title"><i class="fas fa-credit-card" style="margin-right: 6px; color: #f87171;"></i>Borç Yönetimi</span>
+            <span class="score-bar-value" style="color: #dc2626;">4.1 / 10</span>
+          </div>
+          <div class="score-bar-track">
+            <div class="score-bar-fill fill-red" style="width: 41%;"></div>
+          </div>
+          <p class="score-bar-desc">Kredi kartı borçlarınız gelir oranınıza göre yüksek seyrediyor. Asgari ödeme yerine toplam borcu kapatmaya odaklanmanız faiz yükünü önemli ölçüde azaltacaktır. Otomatik tam ödeme kurarak bu puanı hızla yükseltebilirsiniz.</p>
         </div>
       </div>
 
